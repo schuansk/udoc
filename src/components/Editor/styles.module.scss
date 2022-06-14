@@ -1,0 +1,110 @@
+.ModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  > input {
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    background-color: var(--gray-800);
+    color: var(--write);
+  }
+
+  progress[value] {
+    border-radius: 1px;
+    height: 0.5rem;
+  }
+  progress::-webkit-progress-bar {
+    background-color: var(--gray-800);
+    border-radius: 0.6rem;
+  }
+  progress::-webkit-progress-value {
+    background-color: var(--green-400);
+    border-radius: 0.6rem;
+  }
+}
+
+.DeleteModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  p {
+    max-width: 32rem;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    background-color: var(--gray-800);
+    color: var(--write);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.ConfirmButton {
+  border: none;
+  padding: 0.6rem 1rem;
+  color: var(--write);
+  background-color: var(--red-800);
+  font-weight: bold;
+  border-radius: 0.6rem;
+  transition: all 0.2s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.AbordButton {
+  border: none;
+  color: var(--write);
+  background-color: transparent;
+}
+
+.ImageUploadButton {
+  input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+      font-weight: 700;
+      padding: 0.6rem;
+      border-radius: 0.6rem;
+      color: var(--gray-900);
+      background-color: var(--green-400);
+      display: inline-block;
+      transition: all 0.2s;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &:focus + label,
+    & + label:hover {
+      opacity: 0.8;
+    }
+
+    & + label {
+      cursor: pointer;
+    }
+
+    &:focus + label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    & + label * {
+      pointer-events: none;
+    }
+  }
+}
