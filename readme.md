@@ -53,4 +53,4 @@
 
 ---
 
-<p align="center">Lovingly made by Schuansk Torres ❤️.</p>
+<p align="center">Made lovingly by Schuansk Torres ❤️.</p>
